@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Zidan-Web Resume</title>
+    <link rel="stylesheet" href="./plugins/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!-- customCSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- JQ -->
+    <script src="./plugins/jquery-3.5.1.min.js"></script>
+    <style>
+    .card {
+        width: 25rem;
+    }
+    
+    </style>
+
+</head>
+<body class="bg-light">
+    <header class="bg-dark fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark container">
+          <a class="navbar-brand" href="index.html">ZidanResume</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#zinav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="zinav">
+            <ul class="navbar-nav" style="width:100%;">
+              
+              <li class="myleft-5">
+                <ul class="myclear-le mycol-sm">
+                  <li class="nav-item myli-sm myliclear-md dropright">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"><i class="fas fa-user mr-2"></i>關於我</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#" onclick="">個人資料</a>
+                        
+                          <a class="dropdown-item" href="#" onclick="">自我簡介</a>
+                        
+                          <a class="dropdown-item" href="#" onclick="">工作技能</a>
+    
+                          <a class="dropdown-item" href="#" onclick="">工作經歷</a>
+    
+                          <a class="dropdown-item" href="#" onclick="">學歷資料</a>
+                          
+                        </div>
+                  </li>
+                  <li class="nav-item myli-sm myliclear-md">
+                    <a class="nav-link" href="#"><i class="fas fa-people-arrows mr-2"></i>獵職條件</a>
+                  </li>
+                  <li class="nav-item myli-sm myliclear-md">
+                    <a class="nav-link" href="#"><i class="fas fa-address-card mr-2"></i>履歷</a>
+                  </li>
+                  <li class="nav-item myli-sm myliclear-md">
+                    <a class="nav-link" href="#"><i class="fas fa-address-book mr-2"></i>作品集</a>
+                  </li>
+                  <li class="nav-item myli-sm myliclear-md">
+                    <a class="nav-link" href="#"><i class="fas fa-images mr-2"></i>圖管理</a>
+                  </li>
+                </ul>
+              </li>
+    
+            <li class="myright-5">
+              <ul style="list-style: none;">
+                <li class="nav-item">
+                    <a class='nav-link' href='login.html'><i class='fas fa-sign-in-alt mr-2'></i>登入</a>            
+                </li>
+              </ul>
+            </li>
+    
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+<section class="row col-12 ">
+<section class="w-100 d-flex flex-column align-items-center justify-content-center" style="height:90vh;">
+    <div>
+        <p>履歷表管理後台，請在下方登入或註冊。</p>
+    </div>
+
+
+<!-- 登入區域 -->
+<form action="" method="post" class="form-group" style="width:600px;">
+    <div class="container">
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home">會員登入</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile">註冊會員</a>
+          </li>
+        </ul>
+
+        <div class="tab-content col-12 card" style="width:600px; height:400px;">
+            
+            <div class="tab-pane card-body text-center active" id="home">
+                    <!-- <div class=""> -->
+                    <form action="" method="post">
+                        <div style="width:100%;" class="">
+                            <br>
+                            <p>帳號：<input type="text" name="acc" id="acc" class="myform-control"></p>
+                            <p>密碼：<input type="password" name="pw" id="pw" class="myform-control"></p>
+                            <input type="submit" value="登入" id="login" class="btn btn-outline-secondary">
+                            <input type="reset" value="重置" class="btn btn-outline-secondary">
+                            <br><br>
+                        </div>
+                    </form>
+                    <!-- </div> -->
+            </div>
+
+                    
+                
+            <div class="tab-pane card-body" id="profile">
+                    <!-- <div class=""> -->
+                    <form action="" method="post">
+                        <div style="text-align:right; padding-right:50px;">
+                            <br>
+                            <p>登入帳號：<input type="text" name="acc" id="acc2" class="myform-control" placeholder="請輸入英數字元，勿超過32個字元" size="40px"></p>
+                            <p>登入密碼：<input type="password" name="pw" id="pw2" class="myform-control" placeholder="請輸入英數字元，勿超過32個字元" size="40px"></p>
+                            <p>再次確認密碼：<input type="password" name="pw2" id="pw3" class="myform-control" placeholder="請輸入同上字元" size="40px"></p>
+                            <!-- <p>姓名：<input type="text" name="name" id="name" class="myform-control" size="40px"></p> -->
+                            <p>電子郵件：<input type="text" name="email" id="email" class="myform-control" placeholder="如「xxx@xxmail.com」" size="40px"></p>
+                            <!-- <p>居住縣市：<input type="text" name="residence" id="residence" class="myform-control" placeholder="如「新北市」,「桃園市」" size="40px"></p> -->
+                        </div>
+                            
+                            <div class="text-center">
+                                <input type="submit" value="註冊" id="reg" class="btn btn-outline-secondary">
+                                <input type="reset" value="重置" class="btn btn-outline-secondary">
+                            </div>
+                    </form>
+                    <!-- </div> -->
+            </div>
+            
+        </div>
+    </div>    
+
+
+            
+        
+</form>
+</section>
+</section>
+
+
+
+
+</script>
+
+</body>
+</html>

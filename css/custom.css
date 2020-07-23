@@ -1,0 +1,630 @@
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.addzone>*{
+  background-color: #ccc;
+  border: 2px solid #aaa;
+  margin-bottom: 5px;
+  min-height: 50px;
+}
+
+.myleft-5{
+  /* float:left;  */
+  display: flex !important;
+  flex-flow: row wrap !important;
+  list-style: none;
+}
+.myright-5{
+  position: absolute;
+  right: 18px;
+  display: flex !important;
+  flex-flow: row wrap !important;
+  list-style: none;
+}
+
+.myclear-le{
+  list-style: none; 
+  padding-left: 10px;
+  display: flex;
+  flex-flow: column wrap;
+}
+@media (min-width: 576px){
+  .mycol-sm {
+      max-width: 100%;  
+      display: flex;
+      flex-flow: row wrap;
+      
+  }
+}
+
+.myli-sm{
+  padding-right: 15px;
+}
+@media (min-width: 768px){
+  .myliclear-md {
+    padding-right: 0px;
+  }
+}
+
+footer{
+  width: 100vw;
+  /* position: absolute; */
+  bottom: 0vh;
+}
+
+.bobofixed {
+  position: fixed;
+  border: 3px solid rgb(0, 255, 230);
+  border-radius: 0.5rem;
+  bottom: 5vh;
+  right: 5vh;
+  z-index: 999;
+  animation: bobojump 2s ease infinite;
+}
+
+.myform-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgb(0, 255, 230);
+  outline: 0px;
+  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 255, 230, 0.3);
+}
+
+.pinefixed {
+  position: absolute;
+  bottom: 0;
+  left: 1vh;
+  z-index: 999;
+}
+@media (max-width: 650px){
+  .pine-xs {
+    transform: scale(0.58);
+    position: absolute;
+    bottom: -3.4vh;
+    left: -3.6vh;
+  }
+}
+
+.mytitle{
+  font-size: 1.3rem;
+}
+
+.vline{
+  width: 0.05rem;
+  background: linear-gradient(to bottom, transparent 10%, #000000 15%, #000000 90%, transparent 95%);
+}
+
+.myhighlight{
+  background: linear-gradient(60deg,#26c6da,#0097a7);
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,.2), 0 10px 23px -11px rgba(0,188,212,.6);
+}
+
+.bd-radius-clear{
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.mypl-20px{
+  padding-left: 20px;
+}
+
+.mydropdown-menu{
+  background-color: rgba(0,255,230,0.8);  
+  transition: background 1s ease-in-out 0s, filter 1s ease-in-out 0s, box-shadow 1s ease-in-out 0s;
+}
+.mydropdown-menu:hover,
+.mydropdown-menu:focus {
+  text-decoration: none;
+  box-shadow:inset 0 0 0.75rem 0.1rem rgb(0, 255, 230);
+  filter:drop-shadow(0 0 0.75rem rgb(0, 255, 230));
+}
+.dropdown-item{
+  color: rgb(130, 130, 130); 
+  background: transparent;
+  transition: background 0.55s ease-in-out 0s, color 0.55s ease-in-out 0s;
+}
+.dropdown-item:hover{
+  color: rgb(50, 50, 50); 
+  background: white; 
+}
+
+
+@media (max-width: 768px){
+  .mydropdown-menu{
+    background-color: rgba(0,255,230,0.3);  
+  }
+  .mydropdown-menu:hover,
+  .mydropdown-menu:focus {
+    text-decoration: none;
+    box-shadow:inset 0 0 0.75rem 0.1rem rgb(0, 255, 230);
+    filter:drop-shadow(0 0 0.75rem rgb(0, 255, 230));
+  }
+  .dropdown-item{
+    color: rgb(223, 223, 223);
+    transition: background 0.55s ease-in-out 0s, color 0.55s ease-in-out 0s;  
+  }
+  .dropdown-item:hover{
+    color: rgb(50, 50, 50); 
+  }
+}
+
+
+.bg-info{
+  opacity: 1;
+}
+@media (max-width: 768px){
+  .bg-info-opa {
+    opacity: 0.8;
+  }
+}
+
+
+
+
+/* Loader */
+body:after {
+  animation: overlay-hide 1.5s ease-in forwards !important;
+  background: #ffffff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+@keyframes overlay-hide {
+  0% {
+    opacity: 1;
+    z-index: 100000;
+  }
+
+  15% {
+    opacity: 1;
+    z-index: 100000;
+  }
+
+  99% {
+    opacity: 0;
+    z-index: 100000;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+#banner{
+  position: relative;
+  height:60vh;
+}
+
+#banner img{
+  object-fit: cover;
+  height:60vh;
+}
+
+#banner::after{
+  content: "";
+  background-image: url("../img/block_deco2.svg");
+  /* background-size: 100% 100%; 不能下固定原始檔案尺寸，否則在壓縮vw過程，會一直增加after的垂直尺寸。*/   
+  background-position: center;
+  width: 100%;
+  height: 22%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 99;
+} 
+@media screen and (max-width: 1280px){
+  #banner:after {
+      background-size: 179% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 905px){
+  #banner:after {
+      background-size: 180% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 736px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 10%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 576px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 320px){
+  #banner:after {
+      background-size: 340% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+
+/* 以下：若不要針對#banner img下height:60vh的版本。 */
+/* #banner{
+  position: relative;
+}
+
+#banner img{
+  object-fit: cover;
+}
+
+#banner::after{
+  content: "";
+  background-image: url("../img/block_deco2.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: 99;
+} 
+@media screen and (max-width: 1280px){
+  #banner:after {
+      background-size: 125% 100%;
+      height: 24%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 736px){
+  #banner:after {
+      background-size: 125% 100%;
+      height: 24%;
+      bottom: 0px;
+  }
+} */
+/* 以上：若不要針對#banner img下height:60vh的版本。 */
+#banner .carousel-indicators{
+  position: absolute;
+  bottom: -59px;
+}
+
+#banner .carousel-indicators li{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 15px solid transparent;
+  background-color: darkturquoise;
+}
+#banner .carousel-caption,
+#banner .carousel-control-prev i,
+#banner .carousel-control-next i{
+  text-shadow: 0px 1px 5px darkslategray;
+}
+
+.jobac{
+  width: 100%;
+  height: 60vh;
+  background: url("../img/jobac1.jpg");
+  background-attachment: fixed;
+  z-index: -99;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: sepia(80%) opacity(0.7);
+}
+
+
+.acti{
+  position: relative;
+}
+.acti::after{
+  content: "";
+  background-image: url("../img/block_deco2.svg");
+  /* background-size: 100% 100%; 不能下固定原始檔案尺寸，否則在壓縮vw過程，會一直增加after的垂直尺寸。*/   
+  background-position: center;
+  width: 100%;
+  height: 22%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 99;
+} 
+@media screen and (max-width: 1280px){
+  #banner:after {
+      background-size: 179% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 905px){
+  #banner:after {
+      background-size: 180% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 736px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 10%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 576px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 320px){
+  #banner:after {
+      background-size: 340% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+.acti::before{
+  content: "";
+  background-image: url("../img/block_deco2_t.svg");
+  /* background-size: 100% 100%; 不能下固定原始檔案尺寸，否則在壓縮vw過程，會一直增加after的垂直尺寸。*/   
+  background-position: center;
+  width: 100%;
+  height: 22%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 99;
+} 
+@media screen and (max-width: 1280px){
+  #banner:after {
+      background-size: 179% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 905px){
+  #banner:after {
+      background-size: 180% 100%;
+      height: 15%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 736px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 10%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 576px){
+  #banner:after {
+      background-size: 200% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+@media screen and (max-width: 320px){
+  #banner:after {
+      background-size: 340% 100%;
+      height: 7%;
+      bottom: -1px;
+  }
+}
+
+.mycardhover{
+  position: relative;
+  overflow: hidden;
+}
+
+.mycardhover::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.6s ease 0s, height 0.6s ease 0s;
+  transform: translateY(0%);
+}
+
+.mycardhover:hover::after{
+  height: 100%;
+}
+
+.mycardhover::before{
+  content:"Read More";
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: -2px -2px 4px rgba(0, 255, 230, 0.8), 
+                4px 4px 11px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* padding: 50px; */
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.6s ease 0s;
+  z-index: 99;
+  cursor: pointer;
+}
+.mycardhover:hover::before{
+  opacity: 1;
+}
+
+
+.mycontainer{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 576px) {
+  .mycontainer {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mycontainer {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mycontainer {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mycontainer {
+    max-width: 1340px;
+  }
+}
+
+.mypl-7,
+.mypx-7{
+  padding-left: 4.5rem;
+}
+@media (max-width: 1024px) {
+  .mypl-7 {
+    padding-left: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .mypl-7 {
+    padding-left: 1.2rem;
+  }
+}
+
+#skill .mypie{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: rgb(220,220,220);
+  transform-origin: 0 50%;
+  transform: rotate(180deg);
+}
+
+#skill .mypie220{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie220::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: #d66d75;
+  transform-origin: 0 50%;
+  transform: rotate(40deg);
+}
+
+#skill .mypie270{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie270::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: #d66d75;
+  transform-origin: 0 50%;
+  transform: rotate(90deg);
+}
+
+#skill .mypie290{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie290::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: #d66d75;
+  transform-origin: 0 50%;
+  transform: rotate(110deg);
+}
+
+#skill .mypie340{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie340::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: #d66d75;
+  transform-origin: 0 50%;
+  transform: rotate(160deg);
+}
+
+/* .mySkillLayout{
+  display: flex;
+  align-items: center;
+} */
+
+.blo{
+  background: linear-gradient( 60deg, darkturquoise, violet);
+  width:20px;
+  height:20px;
+}
+
+
