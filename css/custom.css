@@ -629,14 +629,25 @@ body:after {
 
 
 
-  @media (max-width: 1200px) {
-    #myform {
-      width:100%;
-    }
+@media (max-width: 1200px) {
+  #myform {
+    width:600px;
   }
-  @media (max-width: 576px) {
-    #myform {
-      width:100%;
-    }
+}
+@media (max-width: 576px) {
+  #myform {
+    width:100%;
+    
   }
+}
 
+@media (max-width: 2000px) {
+  .pLayout {
+    padding-right: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .pLayout {
+    padding-right: 0px;
+  }
+}
