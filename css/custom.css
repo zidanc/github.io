@@ -339,35 +339,35 @@ body:after {
   z-index: 99;
 } 
 @media screen and (max-width: 1280px){
-  #banner:after {
+  .acti:after {
       background-size: 179% 100%;
       height: 15%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 905px){
-  #banner:after {
+  .acti:after {
       background-size: 180% 100%;
       height: 15%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 736px){
-  #banner:after {
+  .acti:after {
       background-size: 200% 100%;
       height: 10%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 576px){
-  #banner:after {
+  .acti:after {
       background-size: 200% 100%;
       height: 7%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 320px){
-  #banner:after {
+  .acti:after {
       background-size: 340% 100%;
       height: 7%;
       bottom: -1px;
@@ -386,35 +386,35 @@ body:after {
   z-index: 99;
 } 
 @media screen and (max-width: 1280px){
-  #banner:after {
+  .acti:after {
       background-size: 179% 100%;
       height: 15%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 905px){
-  #banner:after {
+  .acti:after {
       background-size: 180% 100%;
       height: 15%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 736px){
-  #banner:after {
+  .acti:after {
       background-size: 200% 100%;
       height: 10%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 576px){
-  #banner:after {
+  .acti:after {
       background-size: 200% 100%;
       height: 7%;
       bottom: -1px;
   }
 }
 @media screen and (max-width: 320px){
-  #banner:after {
+  .acti:after {
       background-size: 340% 100%;
       height: 7%;
       bottom: -1px;
@@ -627,4 +627,16 @@ body:after {
   height:20px;
 }
 
+
+
+  @media (max-width: 1200px) {
+    #myform {
+      width:600px;
+    }
+  }
+  @media (max-width: 576px) {
+    #myform {
+      width:100%;
+    }
+  }
 

@@ -13,7 +13,7 @@
 2. V**網站選單主題 (4 組以上） / 40 分**
 <br>提供四組以上之網站主題內容（可參考網頁設計實務其中作業之主題需求），並對應之主選單連結導向。
 
-3. **CSS 設計與網站完整度 / 10 分**
+3. V**CSS 設計與網站完整度 / 10 分**
 <br>使用外部樣式表編寫自訂 CSS 之程式，並確保網站內容完整（含 facicon.ico 與圖文內容）
 
 4. **使用 CSS-Flex （後台登入頁） / 10 分**
@@ -24,6 +24,8 @@
 
 6. **GitPage 上傳 / 10 分**
 <br>使用個人 Github 帳號上傳 repository 並開啟 Github Page 功能（複製連結提供繳交說明）。
+Github Page:
+https://zidanc.github.io/
 
 ## 繳交方式
 完整代碼上傳 Github ClassRoom 至指定 repository，並於說明欄位提供 個人 GitPage 之預覽連結（前項第 6 點動作）
