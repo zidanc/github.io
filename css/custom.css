@@ -631,7 +631,7 @@ body:after {
 
   @media (max-width: 1200px) {
     #myform {
-      width:600px;
+      width:100%;
     }
   }
   @media (max-width: 576px) {
