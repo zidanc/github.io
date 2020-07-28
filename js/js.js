@@ -66,6 +66,15 @@ $(document).ready(function(){
 
 		});
 
+		let totalw=$(window).innerWidth();
+		let adh=$("mynavbar").innerHeight();
+		if(nowAt<adh+1){
+			$("#mynavbar").removeClass("bg-info");
+		}else{
+			$("#mynavbar").addClass("bg-info");
+		}
+
+
 	}
 
 
