@@ -651,3 +651,20 @@ body:after {
     padding-right: 0px;
   }
 }
+
+header#mynavbar a:after{
+  content:"";
+  display:block;
+  height: 1px;
+  width: 0;
+  opacity: 0;
+  background: #ffffff;
+  /* margin: 5px 0; */
+  /* transition: width 1s ease; */
+  transition: 1s ease;
+}
+
+header#mynavbar a.active:after{
+  width:100%;
+  opacity:100%;
+}
