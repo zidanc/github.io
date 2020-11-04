@@ -532,6 +532,27 @@ body:after {
   transform: rotate(180deg);
 }
 
+#skill .mypie150{
+  background: rgb(220,220,220);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, #d66d75 0);
+  /* position: relative; */
+  overflow: hidden;
+}
+#skill .mypie150::before{
+  content:"";
+  /* position: absolute; */
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  background-color: rgb(220,220,220);
+  transform-origin: 0 50%;
+  transform: rotate(150deg);
+}
+
 #skill .mypie220{
   background: rgb(220,220,220);
   height: 40px;
