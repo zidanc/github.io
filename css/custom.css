@@ -689,3 +689,10 @@ header#mynavbar a.active:after{
   width:100%;
   opacity:100%;
 }
+
+
+@media (min-width: 350px){
+  .d-md-block {
+      display: block !important;
+  }
+}
